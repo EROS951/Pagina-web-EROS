@@ -417,6 +417,14 @@ h1::after {
   text-decoration: none;
 }
 
+.course-item .no-link {
+  margin-top: auto;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .skills-grid {
   max-width: 1180px;
   display: grid;
@@ -522,6 +530,88 @@ h1::after {
   color: var(--coral);
 }
 
+.page-hero {
+  padding: clamp(74px, 10vw, 120px) clamp(22px, 7vw, 96px);
+  color: var(--paper);
+  background:
+    linear-gradient(rgba(42, 174, 166, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 174, 166, 0.08) 1px, transparent 1px),
+    linear-gradient(135deg, var(--dark), var(--dark-2));
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+.page-hero h1 {
+  max-width: 900px;
+}
+
+.page-hero p:not(.meta-line) {
+  max-width: 640px;
+  color: rgba(255, 251, 242, 0.76);
+  font-size: 1.15rem;
+}
+
+.back-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 26px;
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+  padding: 0 18px;
+  color: #061315;
+  background: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.classmates-page-section {
+  background: rgba(255, 251, 242, 0.74);
+}
+
+.classmates-page-grid {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.classmates-page-grid a {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.classmates-page-grid span,
+.classmates-page-grid small {
+  color: var(--coral);
+  font-family: var(--mono);
+  font-weight: 700;
+}
+
+.classmates-page-grid strong {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.classmates-page-grid small {
+  color: var(--muted);
+  word-break: break-word;
+}
+
+.classmates-page-grid a:hover {
+  border-color: var(--cyan);
+  transform: translateY(-3px);
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
@@ -605,7 +695,8 @@ h1::after {
   .course-list,
   .skills-grid,
   .aspiration-grid,
-  .classmates-list {
+  .classmates-list,
+  .classmates-page-grid {
     grid-template-columns: 1fr;
   }
 }
