@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eros951.github.io/Pagina-web-EROS/sitemap.xml
